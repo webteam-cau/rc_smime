@@ -88,7 +88,7 @@ class rc_smime extends rcube_plugin
                     $smime_msg       = rcube::Q($this->gettext('siginvalid'));
             }
 
-            $args['prefix'] .= html::div($attrib, $smime_msg);
+            $args['prefix'] .= html::div($attrib, html::tag('i', 'icon', "") . $smime_msg);
 
             // Display each signature message only once
             unset($this->signatures[$this->signed_parts[$part_id]]);

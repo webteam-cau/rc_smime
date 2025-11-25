@@ -64,7 +64,7 @@ class rc_smime extends rcube_plugin
 
             switch ($sig['valid']) {
                 case "valid":
-                    $attrib['class'] = 'smime-notice';
+                    $attrib['class'] = 'smime-notice alert-success boxinformation';
                     $smime_msg       = rcube::Q($this->gettext(array(
                         'name' => 'sigvalid',
                         'vars' => array(
@@ -74,7 +74,7 @@ class rc_smime extends rcube_plugin
                     )));
                     break;
                 case "unverified":
-                    $attrib['class'] = 'smime-warning';
+                    $attrib['class'] = 'smime-warning alert-warning boxwarning';
                     $smime_msg       = rcube::Q($this->gettext(array(
                         'name' => 'sigunverified',
                         'vars' => array(
@@ -84,7 +84,7 @@ class rc_smime extends rcube_plugin
                     )));
                     break;
                 default:
-                    $attrib['class'] = 'smime-error';
+                    $attrib['class'] = 'smime-error alert-danger boxerror';
                     $smime_msg       = rcube::Q($this->gettext('siginvalid'));
             }
 

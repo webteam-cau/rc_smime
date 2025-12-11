@@ -1,6 +1,7 @@
 #smime-message,
 #messagebody div #smime-message
 {
+    box-sizing: border-box;
 }
 
 div.smime-warning > i.icon::before,
